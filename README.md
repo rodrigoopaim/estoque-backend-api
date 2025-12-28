@@ -39,9 +39,14 @@ Uma API REST para gerenciamento de estoque, desenvolvida com **Node.js** e **Pos
 3. **Configure o Ambiente:**
 Crie um arquivo .env na raiz do projeto e preencha suas credenciais:
 Exemplo base do arquivo .env:
+
+
 **env**
+```bash
 CONNECTION_STRING=postgresql://usuario:senha@host:porta/nome_do_banco
 PORT=3000
+```
+
 
 5. **Inicie o servidor:**
   ```bash
@@ -49,21 +54,28 @@ PORT=3000
 ```
 O servidor iniciará na porta 3000 por padrão.
 
-**🛣️ Endpoints da API**
-| **Método** | **Rota**         | **Descrição**                    |
-| GET    | /produto     | Lista todos os produtos       |
-| GET    | /produto:id  |	Busca um produto pelo ID      |
-| POST   | /produto     | Cadastra um novo produto      |
-| PATCH  | /produto/:id | Atualiza um produto existente |
-| DELETE | /produto/:id | Remove um produto do sistema  |
+
+## 🛣️ Endpoints da API
+
+| Método | Rota            | Descrição                       |
+|--------|-----------------|---------------------------------|
+| GET    | /produtos       | Lista todos os produtos         |
+| GET    | /produtos/:id   | Busca um produto pelo ID        |
+| POST   | /produtos       | Cadastra um novo produto        |
+| PATCH  | /produtos/:id   | Atualiza um produto existente   |
+| DELETE | /produtos/:id   | Remove um produto do sistema    |
+
 
 Exemplo de Requisição (Atualizar Produto)
+
 PUT /produtos/1
+
 ```json
 {
   "nome": "Teclado Mecânico RGB",
   "preco": 299.90
 }
 ```
+
 
 Desenvolvido por Rodrigo O. Paim

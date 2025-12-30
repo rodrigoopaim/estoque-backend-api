@@ -83,7 +83,6 @@ async function atualizarProduto(req, res) {
 async function atualizarProdutoAtv(req, res) {
     const id = Number(req.params.id);
     const acao = req.params.acao;
-    console.log(acao);
     let parametro;
     try {
         if(!id){
